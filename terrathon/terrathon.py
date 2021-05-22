@@ -1,6 +1,6 @@
 import logging
 
-import terraform
+from terrathon import terraform
 
 
 def apply_or_exit(approve, workspace):

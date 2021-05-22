@@ -1,7 +1,7 @@
 import logging
 import subprocess
 
-import utils
+from terrathon import utils
 
 
 def run(subcommand, options, on_success=utils.do_nothing, on_error=utils.do_nothing):
