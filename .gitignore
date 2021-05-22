@@ -1,3 +1,9 @@
 ### Jetbrains
 .idea
 *.iml
+
+### Pip
+
+build
+dist
+terrathon.egg-info
