@@ -1,14 +1,10 @@
 import logging
 import subprocess
 
-import process
+import utils
 
 
-def do_nothing():
-    pass
-
-
-def run(subcommand, options, on_success=do_nothing, on_error=do_nothing):
+def run(subcommand, options, on_success=utils.do_nothing, on_error=utils.do_nothing):
     try:
         command = ['terraform', subcommand]
         command.extend(options)
@@ -24,6 +20,6 @@ def run(subcommand, options, on_success=do_nothing, on_error=do_nothing):
         return False
 
 
-def run_or_exit(subcommand, options, on_success=do_nothing, on_error=do_nothing):
+def run_or_exit(subcommand, options, on_success=utils.do_nothing, on_error=utils.do_nothing):
     has_succeeded = run(subcommand=subcommand, options=options, on_success=on_success, on_error=on_error)
-    process.exit_if_false(has_succeeded)
+    utils.exit_if_false(has_succeeded)
