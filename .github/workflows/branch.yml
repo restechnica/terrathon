@@ -21,6 +21,7 @@ jobs:
         run: |
           cd bin
           curl -o sbot https://github.com/restechnica/semverbot/releases/download/v0.0.3/sbot-linux-amd64
+          chmod +x sbot
           cd ..
 
       - name: try semverbot
