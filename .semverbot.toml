@@ -5,7 +5,7 @@ email = "semverbot@github.com"
 name = "semverbot"
 
 [git.tags]
-prefix = "v"
+prefix = ""
 
 [semver]
 mode = "auto"
