@@ -1,0 +1,28 @@
+name: development
+
+on:
+  push:
+    branches-ignore: [ main ]
+
+jobs:
+  build:
+    name: pipeline
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: set up executables path
+        run: |
+          mkdir bin
+          cd bin
+          echo "::add-path::$(pwd)"
+
+      - name: set up semverbot
+        run: |
+          cd bin
+          curl -o sbot https://github.com/restechnica/semverbot/releases/download/v0.0.3/sbot-linux-amd64
+          cd ..
+
+      - name: try semverbot
+        run: |
+          sbot update version
