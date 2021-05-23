@@ -20,10 +20,16 @@ jobs:
       - name: set up semverbot
         run: |
           cd bin
-          curl -o sbot https://github.com/restechnica/semverbot/releases/download/v0.0.3/sbot-linux-amd64
+          curl -o sbot -L https://github.com/restechnica/semverbot/releases/download/v0.0.3/sbot-linux-amd64
           chmod +x sbot
-          cd ..
 
-      - name: try semverbot
+      - name: release
         run: |
           sbot update version
+
+          echo "current version: $(sbot get version)"
+          echo "next version: $(sbot predict version)"
+
+          sbot release version
+          git push origin v$(sbot get version)
+
