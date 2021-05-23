@@ -15,7 +15,7 @@ jobs:
         run: |
           mkdir bin
           cd bin
-          echo "::add-path::$(pwd)"
+          echo "$(pwd)" >> $GITHUB_PATH
 
       - name: set up semverbot
         run: |
