@@ -4,6 +4,9 @@ on:
   push:
     branches: [ main ]
 
+env:
+  SEMVERBOT_VERSION: "0.0.4"
+
 jobs:
   build:
     name: pipeline
@@ -20,7 +23,7 @@ jobs:
       - name: set up semverbot
         run: |
           cd bin
-          curl -o sbot -L https://github.com/restechnica/semverbot/releases/download/v0.0.3/sbot-linux-amd64
+          curl -o sbot -L https://github.com/restechnica/semverbot/releases/download/v$SEMVERBOT_VERSION/sbot-linux-amd64
           chmod +x sbot
 
       - name: release
