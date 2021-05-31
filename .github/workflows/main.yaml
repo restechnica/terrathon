@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  SEMVERBOT_VERSION: "0.0.4"
+  SEMVERBOT_VERSION: "0.1.0"
 
 jobs:
   build:

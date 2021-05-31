@@ -3,7 +3,6 @@
 *.iml
 
 ### Pip
-
 build
 dist
-terrathon.egg-info
+*.egg-info

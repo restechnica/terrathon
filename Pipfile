@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+cliwrap = {editable = true, ref = "0.1.0", git = "https://github.com/restechnica/cliwrap-python"}
 
 [dev-packages]
 invoke = "*"

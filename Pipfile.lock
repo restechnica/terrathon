@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4ee380a6e5b0c04a46818f55f64da7e7c732e4c571a0d8940c879e6f5b497e86"
+            "sha256": "7605248c1a5aea7616f9c6d2ea8f39856cab88db10f0313661812b6ab9c22368"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,7 +15,13 @@
             }
         ]
     },
-    "default": {},
+    "default": {
+        "cliwrap": {
+            "editable": true,
+            "git": "https://github.com/restechnica/cliwrap-python",
+            "ref": "d6f624d745a36891b00e63452cc1c5af84429d26"
+        }
+    },
     "develop": {
         "invoke": {
             "hashes": [
