@@ -15,7 +15,7 @@ setup(
     name='terrathon',
     description='Lightweight Python wrapper around the Terraform CLI',
     install_requires=[
-        "cliwrap>=0.1.2,<1",
+        "cliwrap>=0.1.2,<2",
     ],
     license="Mozilla Public License Version 2.0",
     long_description=long_description(),

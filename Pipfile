@@ -8,7 +8,6 @@ cliwrap = {editable = true, ref = "0.1.0", git = "https://github.com/restechnica
 
 [dev-packages]
 invoke = "*"
-wheel = "*"
 
 [requires]
 python_version = "3.7"
