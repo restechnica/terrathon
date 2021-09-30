@@ -3,12 +3,8 @@ import logging
 from terrathon import terraform
 
 
-def apply_or_exit(approve, workspace):
+def apply_or_exit(options):
     logging.info('applying terraform...')
-    options = ['-var-file', f'config/{workspace}/terraform.tfvars.json']
-
-    if approve:
-        options.append('-auto-approve')
 
     terraform.run_or_exit(
         subcommand='apply',
@@ -18,12 +14,8 @@ def apply_or_exit(approve, workspace):
     )
 
 
-def destroy_or_exit(approve, workspace):
+def destroy_or_exit(options):
     logging.info('destroying terraform...')
-    options = ['-var-file', f'config/{workspace}/terraform.tfvars.json']
-
-    if approve:
-        options.append('-auto-approve')
 
     terraform.run_or_exit(
         subcommand='destroy',
@@ -33,9 +25,8 @@ def destroy_or_exit(approve, workspace):
     )
 
 
-def plan_or_exit(workspace):
-    logging.info(f"planning terraform...")
-    options = ['-var-file', f'config/{workspace}/terraform.tfvars.json']
+def plan_or_exit(options):
+    logging.info('planning terraform...')
 
     terraform.run_or_exit(
         subcommand='plan',

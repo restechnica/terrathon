@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7605248c1a5aea7616f9c6d2ea8f39856cab88db10f0313661812b6ab9c22368"
+            "sha256": "8dd0646727e562057dfd2be24ac378406d6bb825ea6c9d0600d8f197f9a45f7f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -17,20 +17,22 @@
     },
     "default": {
         "cliwrap": {
-            "editable": true,
-            "git": "https://github.com/restechnica/cliwrap-python",
-            "ref": "d6f624d745a36891b00e63452cc1c5af84429d26"
+            "hashes": [
+                "sha256:0bdae78b7ba5a7953fd2ba93120aeb8cb33e329e9674de535dc8bca669da6a98"
+            ],
+            "index": "pypi",
+            "version": "==0.1.1"
         }
     },
     "develop": {
         "invoke": {
             "hashes": [
-                "sha256:7e44d98a7dc00c91c79bac9e3007276965d2c96884b3c22077a9f04042bd6d90",
-                "sha256:da7c2d0be71be83ffd6337e078ef9643f41240024d6b2659e7b46e0b251e339f",
-                "sha256:f0c560075b5fb29ba14dad44a7185514e94970d1b9d57dcd3723bec5fed92650"
+                "sha256:374d1e2ecf78981da94bfaf95366216aaec27c2d6a7b7d5818d92da55aa258d3",
+                "sha256:769e90caeb1bd07d484821732f931f1ad8916a38e3f3e618644687fc09cb6317",
+                "sha256:e6c9917a1e3e73e7ea91fdf82d5f151ccfe85bf30cc65cdb892444c02dbb5f74"
             ],
             "index": "pypi",
-            "version": "==1.5.0"
+            "version": "==1.6.0"
         }
     }
 }
