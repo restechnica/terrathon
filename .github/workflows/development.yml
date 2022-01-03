@@ -13,6 +13,8 @@ jobs:
 
       - name: set up executables path
         run: |
+          echo "$(pwd)"
+          ls -al
           mkdir bin
           cd bin
           echo "$(pwd)" >> $GITHUB_PATH
