@@ -16,6 +16,7 @@ jobs:
           mkdir bin
           cd bin
           echo "$(pwd)" >> $GITHUB_PATH
+          echo "$PATH"
 
 #      - name: set up semverbot
 #        run: |
