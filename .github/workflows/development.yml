@@ -20,19 +20,15 @@ jobs:
           echo "$(pwd)" >> $GITHUB_PATH
           echo "$PATH"
 
-#      - name: set up semverbot
-#        run: |
-#          cd bin
-#          curl -o sbot -L https://github.com/restechnica/semverbot/releases/download/v0.0.3/sbot-linux-amd64
-#          chmod +x sbot
-#
-#      - name: release
-#        run: |
-#          sbot update version
-#
-#          echo "current version: $(sbot get version)"
-#          echo "next version: $(sbot predict version)"
-#
-#          sbot release version
-#          git push origin v$(sbot get version)
+      - name: set up semverbot
+        run: |
+          cd bin
+          curl -o sbot -L https://github.com/restechnica/semverbot/releases/download/v1.0.0/sbot-linux-amd64
+          chmod +x sbot
+          echo "$(pwd)"
+          ls -al
+
+      - name: test
+        run: |
+          sbot update version
 
